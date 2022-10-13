@@ -1,6 +1,6 @@
 # LED-Stairwell-Steps-Arduino  
 This Arduino sketch sequentially turns on and off LED strips that are attached under the bullnose of each step in a stairwell.  
-The sketch allows several patterns of turning off and on. PIR sensors ("motion detectors") determine if a person is entering the  
+The sketch allows several patterns of turning off and on. PIR sensors ("motion detectors") determine if a person is entering the
 stairwell and the direction they are going.  
 
 ## Design  
