@@ -45,4 +45,6 @@ Various small electrical hardware, soldering supplies, etc.
 Software:
 Arduino library ShiftPWM by elcojacobs
 
+## LEDs under corner molding, PIR sensor inside breath mint container:
+
 ![PIR and LEDs on landing](/images/landing.JPG)
