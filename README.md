@@ -44,3 +44,5 @@ Various small electrical hardware, soldering supplies, etc.
 
 Software:
 Arduino librart ShiftPWM by elcojacobs
+
+![PIR and LEDs on landing](/PA120501.JPG)
