@@ -61,7 +61,7 @@ boolean bLanding = false;           // Var holds output value of PIR sensor on l
 unsigned int onOffSwitchPin = 6;    // Pin for on off switch to override PIR's. Pin can be changed by user.
 
 //Shift register vars.
-const int ShiftPWM_latchPin = 8; //Pin 8 (latch pin) from 74HC595 shift register gets connected to Arduino pin 8. Arduino pin be changed by user.
+const int ShiftPWM_latchPin = 8; //Pin 12 (latch pin) from 74HC595 shift register gets connected to Arduino pin 8. Arduino pin be changed by user.
 //Because of SPI, pin 11 (serial clock pin) from 74HC595 shift register must be connected to Arduino Uno pin 13. No clockpin var needed.
 //Because of SPI, pin 14 (data pin) from 74HC595 shift register must be connected to Arduino Uno pin 11. No datapin var needed.
 
