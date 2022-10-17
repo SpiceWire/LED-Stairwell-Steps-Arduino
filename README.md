@@ -52,18 +52,21 @@ Arduino library ShiftPWM by elcojacobs
 
 ## Arduino Uno  
 The Arduino Uno uses SPI to tell the shift registers which LED strips to activate and deactivate, and how bright each strip should be. The MOSI pin sends data to the first 74HC595 chip, which then forwards relevant data to the second 74HC595 chip.  
-![PIR and LEDs on landing](/images/landing.JPG)
+![Arduino](/images/ArduinoToShiftRegister.png)
 
 
 ## Shift Registers  
 Serial data from the first 74HC595 chip is fed to the input of the second chip. Each output pin of the shift registers controls a single LED strip about 32 inches long.  
-
+![ShiftRegisters](/images/Shift_Register_Schematic.png)
 
 ## LED Strips  
 A single representative example of the 16 LED strips is shown. The output of each shift register pin is fed to a current limiting resistor attached to the base of a 2N2222 transistor. It is important that the LED strips draw power from the power supply and are controlled by the transistor on the "return" line. 
-
+![LEDStrips](/images/LEDStrips.png)  
 
 ## Control switch and PIR sensors  
 The control switch (see code) activates or deactivates the LED strips to assist with troubleshooting.  
-The PIR sensors 
+PIR sensors send signals to the Arduino when movement is detected. One PIR sensor is at the bottom of the stairwell. The other is at the top of the stairwell. The two sensors do not have overlapping fields due to a landing and change of direction in the middle of the stairwell. '
+![ControlSwitch](/images/Switch.png)
+![PIRSensors](/images/PIRSensors.png)
+
 
