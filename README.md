@@ -12,7 +12,7 @@ the top or bottom of the stairs. Entering from the top of the stairwell gives a 
 
 Because individually controlling the 16 steps in the stairwell would require more pins than most Arduinos have, two 8-register  
 74HC595 shift registers were used to "expand" the number of I/O pins run by the Arduino.  Each shift register's output is  
-connected to a 2N2222 transisitor. The transistor acts as a switch to turn the LED strips on and off. 
+connected to a 2N2222 transisitor. The transistors act as a switch to turn the LED strips on and off. 
 
 Each step is 32 inches wide, allowing about 48 LEDs beneath each. Each step at full brightness would require about 400mA. This is well  
 witin the datasheet specs of a 2N2222 transistor, which is 600 mA of continuous collector current. A 480 ohm limiting resistor  
