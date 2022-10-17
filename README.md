@@ -21,6 +21,10 @@ I chose to use transistors and resistors instead of mosfets, etc. simply because
 The PIR's fit well into a breath mint container. Painted, they are unobtrusive.  
 
 I placed LED strips under the corner molding on the stairwell landing and incorporated these as steps into the sequence of lighting.  
+
+## LEDs under corner molding, PIR sensor inside breath mint container:
+![PIR and LEDs on landing](/images/landing.JPG)
+
 The lights and board are fuse protected.   
 
 In addition to the code, this project involves calculation, soldering, circuit design, electrical knowledge and trade skills. Any  
@@ -33,9 +37,9 @@ LED strips cut to the length of the step
 Two 74HC595 shift registers  
 12 volt power supply for LED strips  
 9 volt power supply for Arduino  
-5 volt power supply for shift registers and transistors
+5 volt power supply for shift registers and transistors  
 16 2N2222 transistors  
-16 470 ohm resistors  
+16 470 ohm resistors or 2 resistor network chips such as 4116R-001-471  
 Screw terminals for connecting wire to a circuit board  
 Circuit boards  
 Fuses  
@@ -44,6 +48,14 @@ Various small electrical hardware, soldering supplies, etc.
 Software:
 Arduino library ShiftPWM by elcojacobs
 
-## LEDs under corner molding, PIR sensor inside breath mint container:
+# Schematics  
 
-![PIR and LEDs on landing](/images/landing.JPG)
+## Arduino Uno  
+
+## Shift Registers  
+
+## LED Strips  
+
+## Control switch and PIR sensors
+
+
