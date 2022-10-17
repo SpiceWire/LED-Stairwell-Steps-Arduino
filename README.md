@@ -1,5 +1,6 @@
 # LED-Stairwell-Steps-Arduino  
 This Arduino sketch sequentially turns on and off LED strips that are attached under the bullnose of each step in a stairwell.  
+
 The sketch allows several patterns of turning off and on. PIR sensors ("motion detectors") determine if a person is entering the
 stairwell and the direction they are going.  
 
@@ -32,11 +33,10 @@ person attempting a similar project would need to design for individual needs an
 
 ## Hardware
 Arduino Uno 
-PIRs ("motion detectors")
+PIRs ("motion detectors") such as HC SR501 
 LED strips cut to the length of the step  
 Two 74HC595 shift registers  
-12 volt power supply for LED strips  
-9 volt power supply for Arduino  
+12 volt power supply for LED strips   
 5 volt power supply for shift registers and transistors  
 16 2N2222 transistors  
 16 470 ohm resistors or 2 resistor network chips such as 4116R-001-471  
@@ -51,11 +51,18 @@ Arduino library ShiftPWM by elcojacobs
 # Schematics  
 
 ## Arduino Uno  
+The Arduino Uno uses SPI to tell the shift registers which LED strips to activate and deactivate, and how bright each strip should be. The MOSI pin sends data to the first 74HC595 chip, which then forwards relevant data to the second 74HC595 chip.  
+
 
 ## Shift Registers  
+Serial data from the first 74HC595 chip is fed to the input of the second chip. Each output pin of the shift registers controls a single LED strip about 32 inches long.  
+
 
 ## LED Strips  
+A single representative example of the 16 LED strips is shown. The output of each shift register pin is fed to a current limiting resistor attached to the base of a 2N2222 transistor. It is important that the LED strips draw power from the power supply and are controlled by the transistor on the "return" line. 
 
-## Control switch and PIR sensors
 
+## Control switch and PIR sensors  
+The control switch (see code) activates or deactivates the LED strips to assist with troubleshooting.  
+The PIR sensors 
 
