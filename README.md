@@ -52,6 +52,7 @@ Arduino library ShiftPWM by elcojacobs
 
 ## Arduino Uno  
 The Arduino Uno uses SPI to tell the shift registers which LED strips to activate and deactivate, and how bright each strip should be. The MOSI pin sends data to the first 74HC595 chip, which then forwards relevant data to the second 74HC595 chip.  
+![PIR and LEDs on landing](/images/landing.JPG)
 
 
 ## Shift Registers  
