@@ -7,7 +7,7 @@ stairwell and the direction they are going.
 ## Design  
 The LED strip under each step is controlled individually. The LEDs themselves in this project are not individually addressable.  
 
-I used 12 volt, warm white LED strips. Two PIRs determine if a person is entering the stairwell, and whether from  
+I used 12 volt, warm white LED strips. Two PIRs determine if a person is entering the stairwell and whether from  
 the top or bottom of the stairs. Entering from the top of the stairwell gives a different lighting pattern than entering from the bottom of the stairwell. The stairwell has a landing and change of direction, which means the detection fields of the two PIR sensors do not overlap.  
 
 Because individually controlling the 16 steps in the stairwell would require more pins than most Arduinos have, two 8-register  
