@@ -76,6 +76,6 @@ PIR sensors send signals to the Arduino when movement is detected. One PIR senso
 <p align="center">
   <![ControlSwitch](/images/Switch.png)>  
   
-  <![PIRSensors](/images/PIRSensors.png)>
+  ![PIRSensors](/images/PIRSensors.png)
 </p>  
 
