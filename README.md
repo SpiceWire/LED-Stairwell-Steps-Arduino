@@ -23,6 +23,8 @@ The PIR's fit well into a breath mint container. Painted, they are unobtrusive.
 
 I placed LED strips under the corner molding on the stairwell landing and incorporated these as steps into the sequence of lighting.  
 
+The Arduino library ShiftPWM by elcojacobs is flexible and offers many features beyond what this project needs. 
+
 ## LEDs under corner molding, PIR sensor inside breath mint container:
 ![PIR and LEDs on landing](/images/landing.JPG)
 
@@ -32,9 +34,9 @@ In addition to the code, this project involves calculation, soldering, circuit d
 person attempting a similar project would need to design for individual needs and circumstances.
 
 ## Hardware
-Arduino Uno 
-PIRs ("motion detectors") such as HC SR501 
-LED strips cut to the length of the step  
+Arduino Uno or similar  
+PIRs ("motion detectors") such as HC SR501  
+LED strips cut to the length of the step. I used a strip with warm white 2835 LEDs, about 48 per step.  
 Two 74HC595 shift registers  
 12 volt power supply for LED strips   
 5 volt power supply for shift registers and transistors  
@@ -45,28 +47,34 @@ Circuit boards
 Fuses  
 Various small electrical hardware, soldering supplies, etc.  
 
-Software:
-Arduino library ShiftPWM by elcojacobs
-
 # Schematics  
 
 ## Arduino Uno  
-The Arduino Uno uses SPI to tell the shift registers which LED strips to activate and deactivate, and how bright each strip should be. The MOSI pin sends data to the first 74HC595 chip, which then forwards relevant data to the second 74HC595 chip.  
-![Arduino](/images/ArduinoToShiftRegister.png)
-
+The Arduino Uno uses SPI to tell the shift registers which LED strips to activate and deactivate, and how bright each strip should be. The MOSI pin sends data to the first 74HC595 chip, which then forwards relevant data to the second 74HC595 chip. The Arduino also takes input from two PIR sensors and a control switch. 
+<p align="center">
+  <![Arduino](/images/ArduinoToShiftRegister.png)>  
+</p>
 
 ## Shift Registers  
 Serial data from the first 74HC595 chip is fed to the input of the second chip. Each output pin of the shift registers controls a single LED strip about 32 inches long.  
-![ShiftRegisters](/images/Shift_Register_Schematic.png)
+<p align="center">
+  <![ShiftRegisters](/images/Shift_Register_Schematic.png)>  
+</p>  
 
 ## LED Strips  
-A single representative example of the 16 LED strips is shown. The output of each shift register pin is fed to a current limiting resistor attached to the base of a 2N2222 transistor. It is important that the LED strips draw power from the power supply and are controlled by the transistor on the "return" line. 
-![LEDStrips](/images/LEDStrips.png)  
+A single representative example of the 16 LED strips is shown. The output of each shift register pin is fed to a current limiting resistor attached to the base of a 2N2222 transistor. It is important that the LED strips draw power from the power supply and are controlled by the transistor on the "return" line. The emitter leg of the transistor goes directly to ground.  
+
+Because the power requirements of the LED strip are dependent on the type of LED, number of LEDs per unit length, and overall length of strip, the combimation of 480 ohm resistor and 2N2222 transistor will not work with all situations. Alternative methods can use MOSFETS or the Texas Instruments TLC5940 chip.  
+<p align="center">
+  <![LEDStrips](/images/LEDStrips.png)>   
+</p>  
 
 ## Control switch and PIR sensors  
 The control switch (see code) activates or deactivates the LED strips to assist with troubleshooting.  
 PIR sensors send signals to the Arduino when movement is detected. One PIR sensor is at the bottom of the stairwell. The other is at the top of the stairwell. The two sensors do not have overlapping fields due to a landing and change of direction in the middle of the stairwell. '
-![ControlSwitch](/images/Switch.png)
-![PIRSensors](/images/PIRSensors.png)
-
+<p align="center">
+  <![ControlSwitch](/images/Switch.png)>  
+  
+  <![PIRSensors](/images/PIRSensors.png)>
+</p>  
 
