@@ -8,22 +8,22 @@ stairwell and the direction they are going.
 The LED strip under each step is controlled individually. The LEDs themselves in this project are not individually addressable.  
 
 I used 12 volt, warm white LED strips. Two PIRs determine if a person is entering the stairwell and whether from  
-the top or bottom of the stairs. Entering from the top of the stairwell gives a different lighting pattern than entering from the bottom of the stairwell. The stairwell has a landing and change of direction, which means the detection fields of the two PIR sensors do not overlap.  
+the top or bottom of the stairs. Entering from the top of the stairwell gives a different lighting pattern than entering from the bottom of the stairwell. The stairwell has a landing and change of direction, which means the detection fields of the two PIR sensors do not overlap.
 
-Because individually controlling the 16 steps in the stairwell would require more pins than most Arduinos have, two 8-register  
-74HC595 shift registers were used to "expand" the number of I/O pins run by the Arduino.  Each shift register's output is  
-connected to a 2N2222 transisitor. The transistors act as a switch to turn the LED strips on and off. 
+Because individually controlling the 16 steps in the stairwell would require more pins than most Arduinos have, two 8-register
+74HC595 shift registers were used to "expand" the number of I/O pins run by the Arduino.  Each shift register's output is
+connected to a 2N2222 transisitor. The transistors act as a switch to turn the LED strips on and off.  
 
-Each step is 32 inches wide, allowing about 48 LEDs beneath each. Each step at full brightness would require about 400mA. This is well  
-witin the datasheet specs of a 2N2222 transistor, which is 600 mA of continuous collector current. A 480 ohm limiting resistor  
-decreases the current to the transistor's base.  I used a resistor network chip 4116R-001-471 instead of using separate resistors.  
-I chose to use transistors and resistors instead of mosfets, etc. simply because I had the materials available already.  
+Each step is 32 inches wide, allowing about 48 LEDs beneath each. Each step at full brightness would require about 400mA. This is well
+witin the datasheet specs of a 2N2222 transistor, which is 600 mA of continuous collector current. A 480 ohm limiting resistor
+decreases the current to the transistor's base.  I used a resistor network chip 4116R-001-471 instead of using separate resistors.
+I chose to use transistors and resistors instead of mosfets, etc. simply because I had the materials available already.
 
-The PIR's fit well into a breath mint container. Painted, they are unobtrusive.  
+The PIR's fit well into a breath mint container. Painted, they are unobtrusive.
 
-I placed LED strips under the corner molding on the stairwell landing and incorporated these as steps into the sequence of lighting.  
+I placed LED strips under the corner molding on the stairwell landing and incorporated these as steps into the sequence of lighting.
 
-The Arduino library ShiftPWM by elcojacobs is flexible and offers many features beyond what this project needs. 
+The Arduino library ShiftPWM by elcojacobs is flexible and offers many features beyond what this project needs.
 
 ## LEDs under corner molding, PIR sensor inside breath mint container:
 ![PIR and LEDs on landing](/images/landing.JPG)
