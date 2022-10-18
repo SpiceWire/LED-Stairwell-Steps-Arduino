@@ -67,7 +67,7 @@ A single representative example of the 16 LED strips is shown. The output of eac
 
 Because the power requirements of the LED strip are dependent on the type of LED, number of LEDs per unit length, and overall length of strip, the combimation of 480 ohm resistor and 2N2222 transistor will not work with all situations. Alternative methods can use MOSFETS or the Texas Instruments TLC5940 chip.  
 <p align="center">
-  <![LEDStrips](/images/LEDStrips.png)>   
+  ![LEDStrips](/images/LEDStrips.png)   
 </p>  
 
 ## Control switch and PIR sensors  
