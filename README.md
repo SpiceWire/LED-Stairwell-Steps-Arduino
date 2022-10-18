@@ -26,7 +26,7 @@ I placed LED strips under the corner molding on the stairwell landing and incorp
 The Arduino library ShiftPWM by elcojacobs is flexible and offers many features beyond what this project needs. 
 
 ## LEDs under corner molding, PIR sensor inside breath mint container:
-![PIR and LEDs on landing](/images/landing.JPG)
+<![PIR and LEDs on landing](/images/landing.JPG)>
 
 The lights and board are fuse protected.   
 
@@ -51,6 +51,7 @@ Various small electrical hardware, soldering supplies, etc.
 
 ## Arduino Uno  
 The Arduino Uno uses SPI to tell the shift registers which LED strips to activate and deactivate, and how bright each strip should be. The MOSI pin sends data to the first 74HC595 chip, which then forwards relevant data to the second 74HC595 chip. The Arduino also takes input from two PIR sensors and a control switch. 
+
 <p align="center">
   <![Arduino](/images/ArduinoToShiftRegister.png)>  
 </p>
