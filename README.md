@@ -74,7 +74,7 @@ Because the power requirements of the LED strip are dependent on the type of LED
 The control switch (see code) activates or deactivates the LED strips to assist with troubleshooting.  
 PIR sensors send signals to the Arduino when movement is detected. One PIR sensor is at the bottom of the stairwell. The other is at the top of the stairwell. The two sensors do not have overlapping fields due to a landing and change of direction in the middle of the stairwell. '
 <p align="center">
-  <![ControlSwitch](/images/Switch.png)>  
+  <![Switch](/images/Switch.png)>  
   
   ![PIRSensors](/images/PIRSensors.png)
 </p>  
