@@ -19,8 +19,8 @@ connected to a 2N2222 transisitor. The transistors act as a switch to turn the L
 
 Each step is 32 inches wide, allowing about 48 LEDs beneath each. Each step at full brightness would require about 400mA. This is well
 witin the datasheet specs of a 2N2222 transistor, which is 600 mA of continuous collector current. A 480 ohm limiting resistor
-decreases the current to the transistor's base.  I used a resistor network chip 4116R-001-471 instead of using separate resistors.
-I chose to use transistors and resistors instead of mosfets, etc. simply because I had the materials available already.
+decreases the current to the transistor's base.  A resistor network chip 4116R-001-471 eliminated use of separate resistors.
+Project used transistors and resistors instead of mosfets, etc. because the materials were available already.
 
 The PIR's fit well into a breath mint container. Painted, they are unobtrusive.
 
