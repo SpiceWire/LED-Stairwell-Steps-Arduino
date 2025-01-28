@@ -22,7 +22,7 @@ witin the datasheet specs of a 2N2222 transistor, which is 600 mA of continuous 
 decreases the current to the transistor's base.  A resistor network chip 4116R-001-471 eliminated use of separate resistors.
 Project used transistors and resistors instead of mosfets, etc. because the materials were available already.
 
-The PIR's fit well into a breath mint container. Painted, they are unobtrusive.
+The PIRs fit well into a breath mint container. Painted, they are unobtrusive.
 
 LED strips were placed under the (slightly elevated) corner molding on the stairwell landing and incorporated  as "steps" into 
 the sequence of lighting.
@@ -74,7 +74,7 @@ limiting resistor attached to the base of a 2N2222 transistor. It is important t
 controlled by the transistor on the "return" line. The emitter leg of the transistor goes directly to ground.  
 
 Because the power requirements of the LED strip are dependent on the type of LED, number of LEDs per unit length, and overall length of 
-strip, the combimation of 480 ohm resistor and 2N2222 transistor will not work with all situations. Alternative methods can use MOSFETS or the 
+strip, the combimation of 480 ohm resistor and 2N2222 transistor will not work with all situations. Alternative methods can use mosfets or the 
 Texas Instruments TLC5940 chip.  
 
 ![LEDStrips](/images/LEDStrips.png)   
